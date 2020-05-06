@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dont let me die</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h2>The hanging man</h2>
+    <p>Find the hidden word - enter the letters</p>
+      <!-- GAME CONTAINER STARTED -->
+    <div class="game-container">
+    <!-- Svg tag is scalable vector graphics it is used to make simple 2D animatons using line , circles, polygons etc. -->
+    <svg height="250px" width="200px" class="figure-container">
+
+        <!-- THE ROD PART -->
+        <line x1="80" y1="30" x2="150" y2="30"></line>
+        <line  x1="80" y1="30" x2="80" y2="230"></line>
+        <line  x1="150" y1="30" x2="150" y2="60"></line>
+        <line  x1="50" y1="230" x2="110" y2="230"></line>
+        <!-- the head part -->
+         <circle cx="150" cy="80" r="20" class="fig-part" />
+         <!-- the body of hangman -->
+         <line  x1="150" y1="100" x2="150" y2="150" class="fig-part" ></line>
+          <!-- the arms of hangman-->
+          <line  x1="150" y1="120" x2="110" y2="100" class="fig-part" ></line>
+          <line  x1="150" y1="120" x2="190" y2="100" class="fig-part" ></line>
+          <!-- legs part -->
+          <line  x1="150" y1="150" x2="120" y2="180" class="fig-part" ></line>
+          <line  x1="150" y1="150" x2="180" y2="180" class="fig-part" ></line>
+    
+
+    </svg>
+
+    <div class="wrong-word-container">
+        <div id="wrong-letter">
+        </div>
+    </div>
+
+    <div class="wrap-word">
+        <div class="word" id="word">
+        </div>
+    </div>
+    
+    </div>
+<!-- GAME CONTANER ENDS -->
+    <div class="popup" id="popup">
+       <div class="pop-modal">
+        <button id="popbtn">Play again</button>
+       </div>
+
+    </div>
+
+        <div class="notif" id="notif" >
+            <p>You have already  entered this letter.</p>
+        </div>
+   
+</body>
+</html>
