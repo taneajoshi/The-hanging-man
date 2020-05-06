@@ -10,5 +10,30 @@ const figParts= document.querySelectorAll('.figure-part');
 const words =['wizard', 'scrutiny', 'hunch', 'heartland', 'scrotching', 'doomsday'];
 
 let selectedWord = words[Math.floor(Math.random()*words.length)];
-console.log(selectedWord);
+
+const correctLetters=['w', 'i' , 'z', 'a', 'r', 'd'];
+const wrongLetters =[];
+
+//show hdden word
+function displayWord(){
+    wordElem.innerHTML=`${selectedWord
+                               .split('') // split is used to convert a string into an array where each letter is an array element
+                               .map(letter=>
+                                `  <span class="letter">
+                                ${correctLetters.includes(letter)? letter : ''}
+                                    </span>
+                                
+                                `).join('')  // jon will convert an array back to string
+                            
+                            }`;
+                            const innerWord=wordElem.innerText.replace(/\n/g, '');
+                            
+    if (innerWord=== selectedWord){
+        finalMsg.innerText='congratulations! You won!';
+        popUp.style.display= 'flex';
+    } 
+}
+
+displayWord();
+
 
