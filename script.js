@@ -90,6 +90,16 @@ window.addEventListener('keydown', e=>{
 }
 })
 
+//RESTART GAME
+playAgain.addEventListener('click',()=>{
+    correctLetters.splice(0);
+    wrongLetters.splice(0);
+    selectedWord= words[Math.floor(Math.random()*words.length)];
+    displayWord();
+    updateWrong();
+    popUp.style.display='none';
+})
+
 displayWord();
 
 
