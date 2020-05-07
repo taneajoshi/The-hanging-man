@@ -50,6 +50,11 @@ function updateWrong(){
         part.style.display='none';
     }
     })
+    //checking if game lost
+    if(wrongLetters.length === figParts.length){
+        finalMsg.innerText='You lost buddy';
+        popUp.style.display='flex'
+    }
 }
 
 // show notification
